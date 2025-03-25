@@ -40,8 +40,7 @@ function calcOrder() {
       orderForm.elements.modelCost.value = modelCost.toLocaleString("en-US", {style: "currency", currency: "USD"});
 
       // Retrive the cost of the protection plan
-      let planValue = 
-      document.querySelector('input[name="plan"]:checked').value;
+      let planValue = document.querySelector('input[name="plan"]:checked').value;
 
       // Charge the plan to each item ordered
       let planCost = planValue * quantity;
@@ -60,8 +59,7 @@ function calcOrder() {
       orderForm.elements.totalCost.value = totalCost.toLocaleString("en-US", {style: "currency", currency: "USD"});
 
       orderForm.elements.modelName.value = model.options[mIndex].text;
-      let selectedPlan = 
-      document.querySelector('input[name="plan"]:checked');
+      let selectedPlan = document.querySelector('input[name="plan"]:checked');
       orderForm.elements.planName.value =
       selectedPlan.labels[0].textContent;
 }
